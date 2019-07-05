@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "x": "ng s --port 2020 --aot"
   },
   "private": true,
   "dependencies": {
@@ -20,6 +21,10 @@
     "@angular/platform-browser-dynamic": "~8.0.3",
     "@angular/router": "~8.0.3",
     "@ng-bootstrap/ng-bootstrap": "^5.0.0-rc.1",
+    "@types/lodash": "^4.14.135",
+    "bootstrap": "^4.3.1",
+    "font-awesome": "^4.7.0",
+    "lodash": "^4.17.11",
     "rxjs": "~6.4.0",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
