@@ -1,18 +1,38 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-main',
-  templateUrl: './main.component.html',
-  styleUrls: ['./main.component.scss']
+    selector: 'app-main',
+    templateUrl: './main.component.html',
+    styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
 
-  isNavbarCollapsed: boolean = true;
-  isSidebarCollapsed: boolean = true;
+    private themeWrapper = document.querySelector('body');
 
-  constructor() { }
+    isNavbarCollapsed: boolean = true;
+    isSidebarCollapsed: boolean = true;
 
-  ngOnInit() {
-  }
+    css: boolean = false;
+
+    eins = './assets/styles.css';
+
+    constructor() { }
+
+    ngOnInit() {
+
+        this.themeWrapper.style.setProperty('--footerBackground', 'red');
+
+        // require('style-loader!./../../assets/styles.css')
+
+    }
+
+    toggleCss() {
+        this.css = !this.css;
+        if (this.css) {
+            require('style-loader!./../../assets/styles.css')
+        } else {
+            require('style-loader!./../../assets/styles2.css')
+        }
+    }
 
 }

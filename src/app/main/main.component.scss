@@ -1,3 +1,18 @@
+@import '../theme';
+@import '../functions';
+
+.footer {
+  background-color: var(--footerBackground);
+  color: var(--footerColor);
+  font-family: $default-font;
+  text-align: var(--footerAlignment);
+  padding: 36px;
+  margin-top: 24px;
+  height: 150px;
+  position: relative;
+  bottom: 0;
+}
+
 #header {
     transition: all 0.2s cubic-bezier(0.81, -0.33, 0.345, 1.375);
     left: 260px;
