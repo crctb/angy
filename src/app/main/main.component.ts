@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
     selector: 'app-main',
@@ -9,7 +9,7 @@ export class MainComponent implements OnInit {
 
     private themeWrapper = document.querySelector('body');
 
-    isNavbarCollapsed: boolean = true;
+    isNavbarCollapsed: boolean = false;
     isSidebarCollapsed: boolean = true;
 
     css: boolean = false;
@@ -26,12 +26,13 @@ export class MainComponent implements OnInit {
 
     }
 
+
     toggleCss() {
         this.css = !this.css;
         if (this.css) {
-            require('style-loader!./../../assets/styles.css')
+            // require('style-loader!./../../assets/styles.css')
         } else {
-            require('style-loader!./../../assets/styles2.css')
+            // require('style-loader!./../../assets/styles2.css')
         }
     }
 

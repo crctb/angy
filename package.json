@@ -25,6 +25,9 @@
     "bootstrap": "^4.3.1",
     "font-awesome": "^4.7.0",
     "lodash": "^4.17.11",
+    "ngx-popper": "^6.2.0",
+    "ngx-smart-popover": "^1.1.0",
+    "popper.js": "^1.15.0",
     "rxjs": "~6.5.2",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"

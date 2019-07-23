@@ -41,7 +41,63 @@
 
 @import "../node_modules/bootstrap/scss/modal";
 @import "../node_modules/bootstrap/scss/tooltip";
-@import "../node_modules/bootstrap/scss/popover";
+
+// @import "../node_modules/bootstrap/scss/popover";
 @import "../node_modules/bootstrap/scss/carousel";
 @import "../node_modules/bootstrap/scss/utilities";
 @import "../node_modules/bootstrap/scss/print";
+
+.ngxp__container {
+    max-width: 340px;
+    background: #ffffff;
+    color: black;
+    padding: 15px !important;
+    text-align: center;
+    border: none !important;
+    z-index: 10;
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3) !important;
+}
+
+.ngxp__container[x-placement^="top"] {
+    margin-bottom: 10px !important;
+
+    .ngxp__arrow {
+        border-color: #ffffff transparent transparent transparent !important;
+        border-width: 10px 10px 0 !important;
+        bottom: -10px !important;
+        left: calc(50% - 10px) !important;
+    }
+}
+
+.ngxp__container[x-placement^="bottom"] {
+    margin-top: 10px !important;
+
+    .ngxp__arrow {
+        border-color: transparent transparent #ffffff transparent !important;
+        border-width: 0 10px 10px !important;
+        top: -10px !important;
+        left: calc(50% - 10px) !important;
+    }
+}
+
+.ngxp__container[x-placement^="right"] {
+    margin-left: 10px !important;
+
+    .ngxp__arrow {
+        border-color: transparent #ffffff transparent transparent !important;
+        border-width: 10px 10px 10px 0 !important;
+        left: -10px !important;
+    }
+}
+
+.ngxp__container[x-placement^="left"] {
+    margin-right: 10px !important;
+
+    .ngxp__arrow {
+        border-color: transparent transparent transparent #ffffff !important;
+        border-width: 10px 0 10px 10px !important;
+
+        // bottom: -10px !important;
+        right: -10px !important;
+    }
+}
