@@ -45,3 +45,52 @@
 @import "../node_modules/bootstrap/scss/carousel";
 @import "../node_modules/bootstrap/scss/utilities";
 @import "../node_modules/bootstrap/scss/print";
+
+#pommes {
+    background: red;
+    height: 40px;
+    padding: 8px;
+    color: white;
+    transition: all .45s ease-in;
+
+    &.test {
+        background: green;
+        position: fixed;
+        top: 56px;
+        left: 0;
+        right: 0;
+        animation: .45s stripes ease-in;
+    }
+    &.test2 {
+        background: blue;
+        animation: .45s stripes2 ease-out;
+    }    
+}
+
+.pommes-wrapper {
+    height: 40px;
+}
+
+@keyframes stripes {
+    0% {
+        top: 0px;
+    }
+    100% {
+        top: 56px;
+    }
+}
+
+@keyframes stripes2 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.pams {
+    padding: 25px;
+    background: rgb(194, 190, 190);
+    margin: 5px 0;
+}

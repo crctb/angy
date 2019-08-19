@@ -12,6 +12,8 @@ import { FooterComponent } from './main/footer/footer.component';
 import { BlankyComponent } from './blanky/blanky.component';
 
 import { AppInitService } from './services/app-init.service';
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+import { InViewportDirective } from './directives/in-viewport.directive';
 
 export function initializeApp(appInitService: AppInitService) {
     return (): Promise<any> => {
@@ -25,13 +27,15 @@ export function initializeApp(appInitService: AppInitService) {
         MainComponent,
         HeaderComponent,
         FooterComponent,
-        BlankyComponent
+        BlankyComponent,
+        InViewportDirective
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         HttpClientModule,
-        NgbModule
+        NgbModule,
+        ScrollToModule.forRoot()
     ],
     providers: [
         AppInitService,

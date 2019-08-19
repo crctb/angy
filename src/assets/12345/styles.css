@@ -1,0 +1,18 @@
+body, html {
+    background: red !important;
+}
+
+.pams {
+    background: blue;
+    color: white;
+}
+
+.btn-branding-primary {
+    background: white;
+    color: red;
+}
+
+.btn-branding-primary:hover {
+    background: green;
+    color: white;
+}

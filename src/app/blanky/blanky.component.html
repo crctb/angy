@@ -1,1 +1,50 @@
-<p>blanky works!</p>
+<nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" [ngx-scroll-to]="'eins'" id="nav-eins">Eins</a>
+            <a class="nav-item nav-link" [ngx-scroll-to]="'zwei'" id="nav-zwei">Zwei</a>
+            <a class="nav-item nav-link" [ngx-scroll-to]="'drei'" id="nav-drei">Drei</a>
+            <a class="nav-item nav-link" [ngx-scroll-to]="'vier'" id="nav-vier">Vier</a>
+            <a class="nav-item nav-link" [ngx-scroll-to]="'funf'" id="nav-funf">Funf</a>
+        </div>
+    </div>
+</nav>
+
+<div class="pams" id="eins" appInViewport [disabled]="disableInviewport" (inViewport)="bamm($event)">
+    <h1>EINS</h1>
+    <button class="btn btn-branding-primary">JAPPAPPAPPA</button>
+    {{data}}
+</div>
+
+<div class="pommes-wrapper">
+    <div id="pommes" [debounceTime]="10" appInViewport [disabled]="disableInviewport" (inViewport)="karl($event)">
+        POMMES 
+    </div>
+</div>
+
+<div class="pams" id="zwei" appInViewport [disabled]="disableInviewport" (inViewport)="bamm($event)">
+    <h1>ZWEI</h1>
+    {{data}}
+</div>
+
+<div class="pams" id="drei" appInViewport [disabled]="disableInviewport" (inViewport)="bamm($event)">
+    <h1>DREI</h1>
+    {{data}}
+</div>
+
+<p class="pams" id="vier" appInViewport [disabled]="disableInviewport" (inViewport)="bamm($event)">
+    {{data}}
+</p>
+
+<p class="pams" id="funf" appInViewport [disabled]="disableInviewport" (inViewport)="bamm($event)">
+    {{data}}
+</p>
+
+<p class="pams">
+    {{data}}
+</p>
