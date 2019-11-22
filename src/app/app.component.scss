@@ -1,0 +1,24 @@
+.nav {
+    background: red;
+    color: white;
+    padding: 25px;
+    position: relative;
+
+    &.top {
+        background: green;
+    }
+
+    &.bottom {
+        background: blue;
+    }
+}
+
+.info-box {
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 15px;
+    background: #333;
+    color: #fff;
+    width: 280px;
+}

@@ -1,0 +1,61 @@
+<div class="cookie-manager" id="cookieMonster">
+    <form [formGroup]="formCookie">
+        <p>
+            <small>
+                Wenn Sie Websites besuchen, können diese Daten in Ihrem Webbrowser speichern oder abrufen. Dieses
+                Speichern
+                ist häufig für die Grundfunktionen der Website erforderlich oder der Speicher kann für Marketing-,
+                Analyse-
+                und Personalisierungszwecke der Website verwendet werden, z. B. zum Speichern Ihrer Einstellungen. Der
+                Schutz der Privatsphäre ist uns ein wichtiges Anliegen. Sie haben daher die Möglichkeit, bestimmte Arten
+                des
+                Speicherns zu deaktivieren, die für das grundlegende Funktionieren der Website möglicherweise nicht
+                erforderlich sind. Das Deaktivieren von Speicherkategorien kann sich negativ auf Ihre Erfahrungen mit
+                dieser
+                Website auswirken.
+            </small>
+        </p>
+
+        <hr>
+        <p>
+            <small>
+                Zeige ein kununu Bewertungswidget auf der Karriereseite an.
+                Dadurch werden Cookies sowie Scripte von Drittanbietern geladen.
+                Eine entsprechende Datenschutzerklärungen von kununu findest Du <a
+                    href="https://privacy.xing.com/de/datenschutzerklaerung?sc_o=cookie_consent_banner_privacy_policy_click&sc_o_PropActionOrigin=cookie_consent_banner_bottom">hier</a>.
+            </small>
+        </p>
+        <label for="checkbox">
+            <input type="checkbox" formControlName="kununu" id="checkbox" (change)="toggle($event)" name="kununu" />
+            kununu aktivieren
+        </label>
+
+        <hr>
+
+        <p>
+            <small>
+                Zeige eingebettete Videos von youtube an. Dadurch werden Cookies sowie Scripte von Drittanbietern
+                geladen.
+                Eine entsprechende Datenschutzerklärungen von youtube findest Du <a
+                    href="https://policies.google.com/privacy?hl=de&gl=de">hier</a>.
+            </small>
+        </p>
+        <label for="checkbox2">
+            <input type="checkbox" formControlName="youtube" id="checkbox2" (change)="toggle($event)" name="youtube" />
+            youtube aktivieren
+        </label>
+        <hr>
+        <p>
+            Blende dieses Fenster für zukünftige Besuche aus.
+        </p>
+        <label for="checkbox3">
+            <input type="checkbox" formControlName="hide" id="checkbox3" (change)="toggle($event)" name="hide" />
+            Ausblenden
+        </label>
+
+    </form>
+    <hr>
+    <button class="btn btn-info btn-block mt-4" (click)="hideCookieManager()">
+        schliessen
+    </button>
+</div>

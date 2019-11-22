@@ -1,1 +1,70 @@
-<router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet> -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+
+            <div class="nav" id="bams" appInViewport (inViewport)="bamm($event)">
+                <b>NAV</b>
+                <br>
+                <ul>
+                    <li *ngFor="let i of dummyNav; let x = index">
+                        {{i + x}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-8">
+            <div class="content">
+                <div *ngFor="let i of dummyData; let x = index">
+                    <h1>
+                        {{x}}
+                    </h1>
+                    <p>
+                        {{i}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="info-box">
+    <table>
+        <tr>
+            <td style="width: 160px">direction</td>
+            <td>{{info?.direction}}</td>
+        </tr>
+        <tr>
+            <td>pageYoffset</td>
+            <td>{{info?.pageYOffset}}</td>
+        </tr>
+        <tr>
+            <td>innerHeight</td>
+            <td>{{info?.innerHeight}}</td>
+        </tr>
+        <tr>
+            <td>maxHeight</td>
+            <td>{{info?.maxHeight}}</td>
+        </tr>
+        <tr>
+            <td>target.height</td>
+            <td>{{info?.target.clientHeight}}</td>
+        </tr>
+        <tr>
+            <td>target.offsetTop</td>
+            <td>{{info?.target.offsetTop}}</td>
+        </tr>
+        <tr>
+            <td>target.lastScrollTop</td>
+            <td>{{lastScrollTop}}</td>
+        </tr>
+        <tr>
+            <td>target.actualOffsetTop</td>
+            <td>{{actualOffsetTop}}</td>
+        </tr>
+    </table>
+    <pre style="color: white">
+       {{ pommes | json }}
+    </pre>
+</div>

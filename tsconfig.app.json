@@ -5,6 +5,9 @@
     "types": ["node"],
     "typeRoots": [ "../node_modules/@types" ]
   },
+//   "angularCompilerOptions": {
+//     "enableIvy": true
+//   },
   "include": [
     "src/**/*.ts"
   ],

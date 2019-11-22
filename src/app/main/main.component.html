@@ -12,7 +12,7 @@
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" routerLink="main/pci">PCI</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" tabindex="-1" (click)="isSidebarCollapsed = !isSidebarCollapsed">Sidebar</a>
@@ -29,9 +29,9 @@
 
     <div class="row no-gutters">
 
-        <div class="col">
+        <div class="sidebar-wrapper">
 
-            <nav id="sidebar" [ngClass]="{ 'active': isSidebarCollapsed }">
+            <nav id="sidebar" class="sticky-top" [ngClass]="{ 'active': isSidebarCollapsed }">
                 <div class="sidebar-inner">
                     <div class="sidebar-header">
                         <h3>Navigation</h3>
@@ -51,7 +51,79 @@
                                 <span>Home</span>
                             </a>
                         </li>
-                        <li class="nav-item" (click)="toggleCss()">
+                        <li class="nav-item">
+                            <a>
+                                <i class="fa fa-wpforms"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a>
+                                <i class="fa fa-wpforms"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a>
+                                <i class="fa fa-wpforms"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a>
+                                <i class="fa fa-wpforms"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a>
+                                <i class="fa fa-wpforms"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a>
+                                <i class="fa fa-wpforms"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a>
+                                <i class="fa fa-wpforms"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a>
+                                <i class="fa fa-wpforms"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a>
+                                <i class="fa fa-wpforms"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a>
+                                <i class="fa fa-wpforms"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a>
+                                <i class="fa fa-wpforms"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a>
+                                <i class="fa fa-wpforms"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a>
                                 <i class="fa fa-wpforms"></i>
                                 <span>Home</span>
@@ -63,16 +135,31 @@
             </nav>
         </div>
 
-        <div class="col">
+        <div class="col m-5">
+            <img [src]="'/dummy/store/img/hotel/large/20.jpg'">
+            <span style="height: 40px; display: block;"></span>
+
+            <content-loader width="855">
+                <svg:rect x="0" y="0" width="260" height="160" />
+                <svg:rect x="270" y="0" width="100" height="10" />
+                <svg:rect x="270" y="20" width="380" height="20" />
+                <svg:rect x="270" y="50" width="320" height="10" />
+                <svg:rect x="270" y="70" width="220" height="10" />
+                <svg:rect x="270" y="120" width="300" height="10" />
+                <svg:rect x="700" y="0" width="60" height="40" />
+                <svg:rect x="785" y="0" width="60" height="40" />
+                <svg:rect x="725" y="90" width="120" height="40" />
+            </content-loader>
+            <hr>
+            <hotel-list-content-loader width="200px" [primaryColor]="'#f00'"></hotel-list-content-loader>
+
+            <p *ngFor="let x of dummyData">
+                {{x}}
+            </p>
+
             <router-outlet></router-outlet>
         </div>
 
     </div>
 
-</div>
-
-<div class="theme-wrapper">
-    <div class="footer">
-        Hallo
-    </div>
 </div>

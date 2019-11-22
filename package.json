@@ -3,12 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --host 0.0.0.0 --poll 500",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "x": "ng s --port 2020 --aot"
+    "x": "ng s --port 2220 --aot"
   },
   "private": true,
   "dependencies": {
@@ -25,6 +25,7 @@
     "bootstrap": "^4.3.1",
     "font-awesome": "^4.7.0",
     "lodash": "^4.17.11",
+    "ngx-cookie-service": "^2.2.0",
     "rxjs": "~6.5.2",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
